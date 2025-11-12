@@ -1,0 +1,13 @@
+{
+  "name": "webflow-cloud-astro-boilerplate",
+  "version": "1.0.0",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm ci",
+  "framework": "astro",
+  "nodeVersion": "20",
+  "envVars": {
+    "WEBFLOW_MOUNT_PATH": "/app"
+  }
+}
+
