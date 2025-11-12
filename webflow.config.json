@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developers.webflow.com/schemas/webflow-config.json",
+  "name": "astro-cloud-boilerplate",
+  "version": "1.0.0",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "framework": "astro",
+  "nodeVersion": "20"
+}
+

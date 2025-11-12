@@ -1,0 +1,19 @@
+# Webflow Cloud Configuration
+# Copy this file to .env and fill in your values
+
+# Webflow Cloud mount path (e.g., /app, /admin, /dashboard)
+# This should match the mount path you configured in Webflow Cloud
+WEBFLOW_MOUNT_PATH=/app
+
+# Application Configuration
+PUBLIC_APP_NAME="My Webflow Cloud App"
+PUBLIC_APP_URL=https://yoursite.webflow.io
+
+# Environment
+NODE_ENV=development
+
+# Optional: API Keys and Secrets
+# Add any additional environment variables your app needs
+# API_KEY=your_api_key_here
+# DATABASE_URL=your_database_url_here
+

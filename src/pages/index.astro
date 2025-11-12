@@ -1,11 +1,152 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Section, Container, Block, Link } from '../../devlink/_Builtin/Basic';
+import { Navbar } from '../../devlink/Navbar';
+import { Footer } from '../../devlink/Footer';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Welcome to Webflow Cloud" description="A boilerplate for building Webflow Cloud apps with Astro">
+	<Navbar 
+		navbarLinkFeatures="Features"
+		navbarLinkProducts="Products"
+		navbarLinkResources="Resources"
+		navbarLinkContact="Get Started"
+		client:load 
+	/>
+	
+	<Section
+		client:load
+		tag="section"
+		className="margin-bottom-24px"
+		style={{
+			minHeight: '100vh',
+			display: 'flex',
+			alignItems: 'center',
+			justifyContent: 'center',
+			background: 'linear-gradient(180deg, rgba(50, 69, 255, 0.05) 0%, rgba(188, 82, 238, 0.05) 100%)'
+		}}
+	>
+		<Container>
+			<Block
+				tag="div"
+				className="hero-split"
+				style={{
+					textAlign: 'center',
+					maxWidth: '800px',
+					margin: '0 auto'
+				}}
+			>
+				<h1 class="margin-bottom-24px">Welcome to Webflow Cloud</h1>
+				<p class="margin-bottom-24px" style={{ fontSize: '1.25rem', color: '#6b7280' }}>
+					A modern boilerplate for building cloud apps with Astro and Webflow's design system. 
+					Get started by syncing your Webflow components with DevLink.
+				</p>
+				<div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+					<Link
+						button={true}
+						options={{
+							href: "https://developers.webflow.com/webflow-cloud/getting-started"
+						}}
+						className="button-primary"
+					>
+						View Documentation
+					</Link>
+					<Link
+						button={true}
+						options={{
+							href: "#features"
+						}}
+						style={{
+							backgroundColor: 'white',
+							color: 'var(--primary-color)',
+							border: '2px solid var(--primary-color)'
+						}}
+					>
+						Learn More
+					</Link>
+				</div>
+			</Block>
+		</Container>
+	</Section>
+	
+	<Section
+		client:load
+		tag="section"
+		id="features"
+		style={{
+			padding: '5rem 0',
+			backgroundColor: 'white'
+		}}
+	>
+		<Container>
+			<Block style={{ textAlign: 'center', marginBottom: '3rem' }}>
+				<h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>What's Included</h2>
+				<p style={{ fontSize: '1.125rem', color: '#6b7280' }}>Everything you need to get started with Webflow Cloud</p>
+			</Block>
+			
+			<Block 
+				style={{ 
+					display: 'grid', 
+					gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+					gap: '2rem'
+				}}
+			>
+				<Block style={{ 
+					padding: '2rem', 
+					borderRadius: '1rem',
+					border: '1px solid var(--border-color)',
+					backgroundColor: '#f9fafb'
+				}}>
+					<h3 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>🎨 DevLink Integration</h3>
+					<p style={{ color: '#6b7280' }}>
+						Seamlessly sync your Webflow design system components and use them in your Astro app.
+					</p>
+				</Block>
+				
+				<Block style={{ 
+					padding: '2rem', 
+					borderRadius: '1rem',
+					border: '1px solid var(--border-color)',
+					backgroundColor: '#f9fafb'
+				}}>
+					<h3 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>⚡ Server-Side Rendering</h3>
+					<p style={{ color: '#6b7280' }}>
+						Pre-configured with Astro's Node adapter for SSR and dynamic routing capabilities.
+					</p>
+				</Block>
+				
+				<Block style={{ 
+					padding: '2rem', 
+					borderRadius: '1rem',
+					border: '1px solid var(--border-color)',
+					backgroundColor: '#f9fafb'
+				}}>
+					<h3 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>🚀 Deploy Ready</h3>
+					<p style={{ color: '#6b7280' }}>
+						One-command deployment to Webflow Cloud with automatic CI/CD from GitHub.
+					</p>
+				</Block>
+			</Block>
+		</Container>
+	</Section>
+	
+	<Footer client:load />
 </Layout>
+
+<style>
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		line-height: 1.2;
+	}
+	
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 2.5rem;
+		}
+	}
+</style>
