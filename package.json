@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro build && wrangler dev", 
+    "preview": "astro build && wrangler dev",
     "astro": "astro",
     "deploy": "webflow cloud deploy"
   },
@@ -14,12 +14,12 @@
     "@astrojs/node": "^9.0.0",
     "@astrojs/react": "^4.0.0",
     "astro": "^5.15.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^19.2.4",
+    "@types/react-dom": "^19.2.3",
     "wrangler": "^4.47.0"
   }
 }
