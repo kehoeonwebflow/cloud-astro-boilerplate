@@ -4,10 +4,12 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm ci",
-  "framework": "astro",
   "nodeVersion": "20",
   "envVars": {
     "WEBFLOW_MOUNT_PATH": "/app"
+  },
+"cloud": {
+    "framework": "astro"
   }
 }
 
