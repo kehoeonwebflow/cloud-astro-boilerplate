@@ -10,7 +10,7 @@
     "deploy": "webflow cloud deploy"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.10",
+    "@astrojs/cloudflare": "^12.6.11",
     "@astrojs/node": "^9.0.0",
     "@astrojs/react": "^4.0.0",
     "astro": "^5.15.5",
